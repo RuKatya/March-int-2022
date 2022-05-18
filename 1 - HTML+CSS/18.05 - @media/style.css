@@ -1,0 +1,34 @@
+.one {
+    background-color: red;
+    width: 80%;
+    width: clamp(250px, 70%, 1800px);
+    font-size: calc(1rem + 0.5rem);
+    /*
+    rem - root element
+    em - the closet parent
+    */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.grid div {
+    background-color: aqua;
+    font-size: 1.6rem;
+    border: 1px solid black;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .one {
+        background-color: red;
+        width: 50%;
+    }
+} */
